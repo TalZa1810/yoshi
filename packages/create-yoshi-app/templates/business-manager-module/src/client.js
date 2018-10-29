@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { I18nextProvider } from 'react-i18next';
 import { ModuleRegistry } from 'react-module-container';
-import { create } from 'fedops-logger';
 import { wixAxiosConfig } from 'wix-axios-config';
 import { COMPONENT_ID, BI_VIEW_ID, LAZY_COMPONENT_ID } from './config';
 import i18n from './i18n';
@@ -33,8 +32,6 @@ class AppContainer extends React.Component {
       'businessManager.viewFinishedLoading',
       BI_VIEW_ID,
     );
-    const fedopsLogger = create(LAZY_COMPONENT_ID);
-    fedopsLogger.appLoaded();
   }
 
   render() {
